@@ -39,6 +39,8 @@
             this.SaveFile = new System.Windows.Forms.ToolStripMenuItem();
             this.SaveAsFile = new System.Windows.Forms.ToolStripMenuItem();
             this.PrintFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.правкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.FindReplaceMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BoldButton = new System.Windows.Forms.Button();
             this.ItalicButton = new System.Windows.Forms.Button();
@@ -56,8 +58,6 @@
             this.CopyContext = new System.Windows.Forms.ToolStripMenuItem();
             this.CutContext = new System.Windows.Forms.ToolStripMenuItem();
             this.PasteContext = new System.Windows.Forms.ToolStripMenuItem();
-            this.правкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.FindReplaceMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -83,8 +83,7 @@
             // SaveSign
             // 
             this.SaveSign.Name = "SaveSign";
-            this.SaveSign.Size = new System.Drawing.Size(33, 20);
-            this.SaveSign.Text = "test";
+            this.SaveSign.Size = new System.Drawing.Size(0, 20);
             // 
             // toolStripStatusLabel1
             // 
@@ -127,30 +126,45 @@
             // OpenFile
             // 
             this.OpenFile.Name = "OpenFile";
-            this.OpenFile.Size = new System.Drawing.Size(224, 28);
+            this.OpenFile.Size = new System.Drawing.Size(220, 28);
             this.OpenFile.Text = "Открыть";
             this.OpenFile.Click += new System.EventHandler(this.OpenFile_Click);
             // 
             // SaveFile
             // 
             this.SaveFile.Name = "SaveFile";
-            this.SaveFile.Size = new System.Drawing.Size(224, 28);
+            this.SaveFile.Size = new System.Drawing.Size(220, 28);
             this.SaveFile.Text = "Сохранить";
             this.SaveFile.Click += new System.EventHandler(this.SaveFile_Click);
             // 
             // SaveAsFile
             // 
             this.SaveAsFile.Name = "SaveAsFile";
-            this.SaveAsFile.Size = new System.Drawing.Size(224, 28);
+            this.SaveAsFile.Size = new System.Drawing.Size(220, 28);
             this.SaveAsFile.Text = "Сохранить как...";
             this.SaveAsFile.Click += new System.EventHandler(this.SaveAsFile_Click);
             // 
             // PrintFile
             // 
             this.PrintFile.Name = "PrintFile";
-            this.PrintFile.Size = new System.Drawing.Size(224, 28);
+            this.PrintFile.Size = new System.Drawing.Size(220, 28);
             this.PrintFile.Text = "Печать";
             this.PrintFile.Click += new System.EventHandler(this.PrintFile_Click);
+            // 
+            // правкаToolStripMenuItem
+            // 
+            this.правкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.FindReplaceMenu});
+            this.правкаToolStripMenuItem.Name = "правкаToolStripMenuItem";
+            this.правкаToolStripMenuItem.Size = new System.Drawing.Size(74, 27);
+            this.правкаToolStripMenuItem.Text = "Правка";
+            // 
+            // FindReplaceMenu
+            // 
+            this.FindReplaceMenu.Name = "FindReplaceMenu";
+            this.FindReplaceMenu.Size = new System.Drawing.Size(203, 26);
+            this.FindReplaceMenu.Text = "Поиск и замена";
+            this.FindReplaceMenu.Click += new System.EventHandler(this.FindReplaceMenu_Click);
             // 
             // HelpMenuItem
             // 
@@ -337,21 +351,6 @@
             this.PasteContext.Size = new System.Drawing.Size(162, 24);
             this.PasteContext.Text = "Вставить";
             this.PasteContext.Click += new System.EventHandler(this.PasteContext_Click);
-            // 
-            // правкаToolStripMenuItem
-            // 
-            this.правкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.FindReplaceMenu});
-            this.правкаToolStripMenuItem.Name = "правкаToolStripMenuItem";
-            this.правкаToolStripMenuItem.Size = new System.Drawing.Size(74, 27);
-            this.правкаToolStripMenuItem.Text = "Правка";
-            // 
-            // FindReplaceMenu
-            // 
-            this.FindReplaceMenu.Name = "FindReplaceMenu";
-            this.FindReplaceMenu.Size = new System.Drawing.Size(224, 26);
-            this.FindReplaceMenu.Text = "Поиск и замена";
-            this.FindReplaceMenu.Click += new System.EventHandler(this.FindReplaceMenu_Click);
             // 
             // Interface
             // 

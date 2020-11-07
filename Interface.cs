@@ -12,6 +12,7 @@ namespace TextEditor
         string Filter = "Текстовые файлы (*.txt)|*.txt | Мощные текстовые файлы (*.rtf)|*.rtf";
         string LastSelected = "";
         FindReplaceForm FRForm = null;
+        HelpForm HForm = null;
         public Interface()
         {
             InitializeComponent();
@@ -273,6 +274,16 @@ namespace TextEditor
             MessageBox.Show("Операция завершена!");
         }
 
+        private void HelpMenuItem_Click(object sender, EventArgs e)
+        {
+            if (HForm == null) 
+            {
+                HForm = new HelpForm();
+                HForm.FormClosed += (object s, FormClosedEventArgs evargs) => { HForm = null; };
+                HForm.Show();
+            }
+        }
+
         #endregion
 
         #region Context
@@ -296,11 +307,6 @@ namespace TextEditor
         {
             if (Clipboard.ContainsText())
                 TextBox.Text = TextBox.Text.Insert(TextBox.SelectionStart, Clipboard.GetText());
-        }
-
-        private void HelpMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
 
         #endregion

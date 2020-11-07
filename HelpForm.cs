@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace TextEditor
 {
@@ -15,6 +7,72 @@ namespace TextEditor
         public HelpForm()
         {
             InitializeComponent();
+            //FileTab.Nodes[0].Text = 
+            //    "
+        }
+
+        string OpenInfo = "Кнопка \"Открыть\" открывает диалоговое окно в коотором необходимо выбрать " +
+            "файл формата txt или rtf. " +"Содержимое данного файла будет записано в текстовую зону.";
+        string SaveInfo = "Кнопка \"Сохранить\" сохраняет содержимое текстовой зоны в открытый файл, включая форматирование " +
+            "если открыт rtf файл. В случае если открытого файла нет, будет открыто диалоговое окно в котором необходимо выбрать " +
+            "или создать файл для сохранения данных";
+        string SaveAsInfo = "Кнопка \"Сохранить как\" открывает диалоговое окно в котором необходимо выбрать или создать файл для " +
+            "сохранения содержмиого текстового поля";
+        string PrintInfo = "Кнопка \"Печать\" открывает диалоговое окно печати";
+        string FindReplaceInfo = "Кнопка \"Поиск и замена\" позволяет находить кол-во подстрок в строке и заменять их на другие подстроки. " +
+            "Кнопка \"Найти\" найдет все, заданные в текстовом поле, подстроки, изменит их фон, подсчитает их количество. " +
+            "Кнопка \"Заменить\" заменит все подстроки из поля поиска на строки из поля замены, " +
+            "выделение исчезнат, количество подстррок будет сброшено";
+        string FontInfo = "В меню \"Шрифт\" вы можете изменить шрифт текста его размер или цвет. Для этого необходимо выбрать " +
+            "нужные знаечния в выпадающих меню или в случае с размером шрифта, задать численное значение. В связи с особенностями " +
+            "программы изменять размер шрифта и сам шрифт можно только у всего текста";
+        string FontFormatInfo = "Доступны следующие функции форматирования текста: \n" +
+            "Ж - сделать выделенный текст жирным, или снять данное выделение \n" +
+            "К - записать выделенный текст курсивом или снять выделение курсивом \n" +
+            "Ч - подчеркнуть выделенный текст или снять подчеркивание \n " +
+            "Л - выравнивание текста по левому краю, или отмена данного выравнивания \n " +
+            "Ц - выравнивание текста по центру, или отмена данного выравнивания \n " +
+            "П - выравнивание текста по правому краю, или отмена данного выравнивания \n";
+        string RedactZoneInfo = "Основная рабочая область представлена белым текстовым полем. " +
+            "Работать можно как с пустым полем так и с данными из файла. ";
+        string StatusStripInfo = "Строка состояния содержит информацию о количестве символов в текстовом поле, а также " +
+            "показывает сохранены ли внесенные изменения или нет.";
+
+        private void InfoContainer_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            switch (e.Node.Name) 
+            {
+                case "Open":
+                    InfoBox.Text = OpenInfo;
+                    break;
+                case "Save":
+                    InfoBox.Text = SaveInfo;
+                    break;
+                case "SaveAs":
+                    InfoBox.Text = SaveAsInfo;
+                    break;
+                case "Print":
+                    InfoBox.Text = PrintInfo;
+                    break;
+                case "FindReplace":
+                    InfoBox.Text = FindReplaceInfo;
+                    break;
+                case "Font":
+                    InfoBox.Text = FontInfo;
+                    break;
+                case "FontFormat":
+                    InfoBox.Text = FontFormatInfo;
+                    break;
+                case "RedactZone":
+                    InfoBox.Text = RedactZoneInfo;
+                    break;
+                case "StatusStrip":
+                    InfoBox.Text = StatusStripInfo;
+                    break;
+                default:
+                    InfoBox.Text = "";
+                    break;
+            }
         }
     }
 }
